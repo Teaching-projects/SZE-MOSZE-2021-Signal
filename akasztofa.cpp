@@ -1,20 +1,18 @@
 #include <iostream>
 #include <vector>
-#include <stdio.h>
-#include <conio.h>
 
 #include <string>
 #include "Player.h"
+#include "Words.h"
 // Kitalálandó szavak
 // Két játékos
 // 
 
 int main()
 {
-	std::vector<std::string> szavak = { "homokfuvas", "labda", "feher", "tehen", "ablak", "agy", "telefon", "ceg" };
-	int random = rand() % szavak.size();
+	Words words = Words();
 	std::cout << "Akasztofa progi" << std::endl;
-	std::string szo = szavak[random];
+	std::string szo = words.getRandomWords();
 	Player p1 = Player("Jozsi");
 	Player p2 = Player("Feri");
 	//std::cout << szo << std::endl;
