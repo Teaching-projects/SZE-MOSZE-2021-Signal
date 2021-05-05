@@ -11,21 +11,10 @@
 
 int main()
 {
-	Words words = Words();
 	std::cout << "Akasztofa progi" << std::endl;
-	std::string szo = words.getRandomWords();
-	Player p1 = Player("Jozsi");
-	Player p2 = Player("Feri");
 
-	Game game = Game("Jozsi", "Feri", szo);
-	//std::cout << szo << std::endl;
-	std::string bemenet;
-	int counter = 0;
-	bool gameEnd = false;
-	for (const auto& c : szo) {
-		std::cout << "_" << " ";
-	}
-	char c;
+	Game game = Game("Jozsi", "Feri", "szavak.txt");
+
 	do
 	{
 		for (auto& p : game.getAllPlayer()) {
@@ -35,7 +24,6 @@ int main()
 				game.getWord();
 			}
 		}
-		
 
 	} while (!game.RemainLetter()==0);
 

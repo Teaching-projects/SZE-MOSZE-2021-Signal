@@ -1,0 +1,8 @@
+apple
+pear
+peach
+door
+house
+student
+teacher
+busstation
