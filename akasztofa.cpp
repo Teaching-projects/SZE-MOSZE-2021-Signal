@@ -1,12 +1,11 @@
 #include <iostream>
 #include <vector>
-
 #include <string>
 #include "Game.h"
 #include "Player.h"
 #include "Words.h"
-// Kitalálandó szavak
-// Két játékos
+// Kitalï¿½landï¿½ szavak
+// Kï¿½t jï¿½tï¿½kos
 // 
 
 int main()
