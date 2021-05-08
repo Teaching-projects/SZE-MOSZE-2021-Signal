@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 
-TEST(Character, getNameTest) {
+TEST(Player, getNameTest) {
 
 	std::string example = "Jozsi";
 
@@ -12,7 +12,7 @@ TEST(Character, getNameTest) {
 
 	ASSERT_EQ(example, p.getName());
 };
-TEST(Character, getNameTest) {
+TEST(Player, getPointTest) {
 
 	int example = 0;
 
