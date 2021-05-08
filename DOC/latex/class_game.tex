@@ -1,0 +1,295 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a274952a3d5c79f79c25e0258fbeb158e}{Game}} (std\+::string p1name, std\+::string p2name, std\+::string filename)
+\item 
+char \mbox{\hyperlink{class_game_a102fc931f4b9388734fb3c9b3287a42a}{Get\+Char}} (\mbox{\hyperlink{class_player}{Player}} p)
+\item 
+void \mbox{\hyperlink{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}{get\+Word}} ()
+\item 
+\mbox{\hyperlink{class_player}{Player}} \& \mbox{\hyperlink{class_game_a6264242126c9b07fe0255debec39f95c}{get\+Player\+By\+Id}} (int i)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_game_a9294f4b17bc237c42524b7b53460289a}{get\+All\+Player}} ()
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{class_game_ade6307bf063689c0bd41eee375041b50}{get\+Typed\+Chars}} ()
+\item 
+int \mbox{\hyperlink{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed}{Remain\+Letter}} ()
+\item 
+bool \mbox{\hyperlink{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7}{used\+Letter}} (char c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Game.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_a274952a3d5c79f79c25e0258fbeb158e}\label{class_game_a274952a3d5c79f79c25e0258fbeb158e}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{std\+::string}]{p1name,  }\item[{std\+::string}]{p2name,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                                                                  : Players(\{ \mbox{\hyperlink{class_player}{Player}}(p1name),\mbox{\hyperlink{class_player}{Player}}(p2name) \}), Word(\mbox{\hyperlink{class_words}{Words}}(filename)) \{}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a9294f4b17bc237c42524b7b53460289a}\label{class_game_a9294f4b17bc237c42524b7b53460289a}} 
+\index{Game@{Game}!getAllPlayer@{getAllPlayer}}
+\index{getAllPlayer@{getAllPlayer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getAllPlayer()}{getAllPlayer()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ Game\+::get\+All\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all the players connected to the game.
+
+Definition at line 57 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                      \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} Players;}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_game_a9294f4b17bc237c42524b7b53460289a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a102fc931f4b9388734fb3c9b3287a42a}\label{class_game_a102fc931f4b9388734fb3c9b3287a42a}} 
+\index{Game@{Game}!GetChar@{GetChar}}
+\index{GetChar@{GetChar}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{GetChar()}{GetChar()}}
+{\footnotesize\ttfamily char Game\+::\+Get\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{p }\end{DoxyParamCaption})}
+
+Returns the next character from the standard input 
+
+Definition at line 8 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                            \{}
+\DoxyCodeLine{12     }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     std::cout << p.\mbox{\hyperlink{class_player_a5cdfb66c3d1db49ab28e16661f9d7486}{getName}}() << \textcolor{stringliteral}{"{} irj be egy betut a tippeleshez:"{}};}
+\DoxyCodeLine{15     std::string l;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} counter = 0;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \textcolor{keywordflow}{if} (counter > 0) \{}
+\DoxyCodeLine{20             std::cout << std::endl << \textcolor{stringliteral}{"{}Hibas bemenet, kerlek probald ujra:"{}};}
+\DoxyCodeLine{21         \}}
+\DoxyCodeLine{22         std::getline(std::cin, l);}
+\DoxyCodeLine{23         counter++;}
+\DoxyCodeLine{24     \} \textcolor{keywordflow}{while} (\mbox{\hyperlink{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7}{usedLetter}}(l[0]) || l.length() != 1 || !((l[0] >= \textcolor{charliteral}{'a'} \&\& l[0] <= \textcolor{charliteral}{'z'}) || (l[0] >= \textcolor{charliteral}{'A'} \&\& l[0] <= \textcolor{charliteral}{'Z'})));}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{char} c = l[0];}
+\DoxyCodeLine{27     TypedCharacters.push\_back(c);}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{29 \};}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a102fc931f4b9388734fb3c9b3287a42a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_game_a102fc931f4b9388734fb3c9b3287a42a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a6264242126c9b07fe0255debec39f95c}\label{class_game_a6264242126c9b07fe0255debec39f95c}} 
+\index{Game@{Game}!getPlayerById@{getPlayerById}}
+\index{getPlayerById@{getPlayerById}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getPlayerById()}{getPlayerById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} \& Game\+::get\+Player\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Returns a Players with a given id
+
+Definition at line 75 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                  \{}
+\DoxyCodeLine{76     \textcolor{keywordflow}{return} Game::Players[i];}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_game_ade6307bf063689c0bd41eee375041b50}\label{class_game_ade6307bf063689c0bd41eee375041b50}} 
+\index{Game@{Game}!getTypedChars@{getTypedChars}}
+\index{getTypedChars@{getTypedChars}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getTypedChars()}{getTypedChars()}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ Game\+::get\+Typed\+Chars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                     \{}
+\DoxyCodeLine{73     \textcolor{keywordflow}{return} Game::TypedCharacters;}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ade6307bf063689c0bd41eee375041b50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}\label{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}} 
+\index{Game@{Game}!getWord@{getWord}}
+\index{getWord@{getWord}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getWord()}{getWord()}}
+{\footnotesize\ttfamily void Game\+::get\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                    \{}
+\DoxyCodeLine{39     std::vector<char> chars = \mbox{\hyperlink{class_game_ade6307bf063689c0bd41eee375041b50}{Game::getTypedChars}}();}
+\DoxyCodeLine{40     std::cout << std::endl << \textcolor{stringliteral}{"{}Felhasznalt betuk: "{}};}
+\DoxyCodeLine{41     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& mychar : \mbox{\hyperlink{class_game_ade6307bf063689c0bd41eee375041b50}{Game::getTypedChars}}()) \{}
+\DoxyCodeLine{42         std::cout << mychar << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     std::cout << std::endl;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& word : Game::Word.\mbox{\hyperlink{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}{getWord}}())}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{if} (std::find(chars.begin(), chars.end(), word) != chars.end() || std::find(chars.begin(), chars.end(), word) != chars.end()) \{}
+\DoxyCodeLine{49             std::cout << word << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{52             std::cout << \textcolor{stringliteral}{"{}\_"{}} << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     std::cout << std::endl;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_game_a35e306ed6d5e309cec15a15c38e1dfa2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a35e306ed6d5e309cec15a15c38e1dfa2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed}\label{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed}} 
+\index{Game@{Game}!RemainLetter@{RemainLetter}}
+\index{RemainLetter@{RemainLetter}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{RemainLetter()}{RemainLetter()}}
+{\footnotesize\ttfamily int Game\+::\+Remain\+Letter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                        \{}
+\DoxyCodeLine{62     std::vector<char> chars = \mbox{\hyperlink{class_game_ade6307bf063689c0bd41eee375041b50}{Game::getTypedChars}}();}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} counter = 0;}
+\DoxyCodeLine{64     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& word : Game::Word.\mbox{\hyperlink{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}{getWord}}())}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if} (!(std::find(chars.begin(), chars.end(), word) != chars.end())) \{}
+\DoxyCodeLine{67             counter++;}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} counter;}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7}\label{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7}} 
+\index{Game@{Game}!usedLetter@{usedLetter}}
+\index{usedLetter@{usedLetter}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{usedLetter()}{usedLetter()}}
+{\footnotesize\ttfamily bool Game\+::used\+Letter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Game.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                             \{}
+\DoxyCodeLine{31     std::vector<char> chars = \mbox{\hyperlink{class_game_ade6307bf063689c0bd41eee375041b50}{Game::getTypedChars}}();}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if} (std::find(chars.begin(), chars.end(), c) != chars.end() ||}
+\DoxyCodeLine{33         std::find(chars.begin(), chars.end(), c) != chars.end()) \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a21e8d31d63e1258bfdf8e62eb5370eb7_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{akasztofa_8cpp}{}\doxysection{akasztofa.\+cpp File Reference}
+\label{akasztofa_8cpp}\index{akasztofa.cpp@{akasztofa.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Words.\+h\char`\"{}}\newline
+Include dependency graph for akasztofa.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{akasztofa_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{akasztofa_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{akasztofa_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{akasztofa_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{akasztofa.cpp@{akasztofa.cpp}!main@{main}}
+\index{main@{main}!akasztofa.cpp@{akasztofa.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file akasztofa.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     std::cout << \textcolor{stringliteral}{"{}Akasztofa progi"{}} << std::endl;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_game}{Game}} game = \mbox{\hyperlink{class_game}{Game}}(\textcolor{stringliteral}{"{}Jozsi"{}}, \textcolor{stringliteral}{"{}Feri"{}}, \textcolor{stringliteral}{"{}szavak.txt"{}});}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : game.\mbox{\hyperlink{class_game_a9294f4b17bc237c42524b7b53460289a}{getAllPlayer}}()) \{}
+\DoxyCodeLine{21             \textcolor{keywordflow}{if} (game.\mbox{\hyperlink{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed}{RemainLetter}}() > 0) \{}
+\DoxyCodeLine{22                 std::cout << std::endl;}
+\DoxyCodeLine{23                 game.\mbox{\hyperlink{class_game_a102fc931f4b9388734fb3c9b3287a42a}{GetChar}}(p);}
+\DoxyCodeLine{24                 game.\mbox{\hyperlink{class_game_a35e306ed6d5e309cec15a15c38e1dfa2}{getWord}}();}
+\DoxyCodeLine{25             \}}
+\DoxyCodeLine{26         \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \} \textcolor{keywordflow}{while} (!game.\mbox{\hyperlink{class_game_abc19e843bbe4f5890ff8b1c705e7a6ed}{RemainLetter}}()==0);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     std::cout << std::endl << \textcolor{stringliteral}{"{}Jatek vege"{}};}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{akasztofa_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

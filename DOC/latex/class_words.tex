@@ -1,0 +1,126 @@
+\hypertarget{class_words}{}\doxysection{Words Class Reference}
+\label{class_words}\index{Words@{Words}}
+
+
+{\ttfamily \#include $<$Words.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_words_aabf02b7478f57e0bd9fea0e2f87f910f}{Words}} (std\+::string filename)
+\item 
+std\+::string \mbox{\hyperlink{class_words_a494fb65e9124ade0261dfed96e605cfb}{generate\+Words}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_words_a0d2d62508b6ee5125cf8c1540cd262d0}{get\+Word}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_words_ad8f06081d44d623c6b14ca61e27bc75b}{get\+Text\+From\+File}} (std\+::string filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Words.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_words_aabf02b7478f57e0bd9fea0e2f87f910f}\label{class_words_aabf02b7478f57e0bd9fea0e2f87f910f}} 
+\index{Words@{Words}!Words@{Words}}
+\index{Words@{Words}!Words@{Words}}
+\doxysubsubsection{\texorpdfstring{Words()}{Words()}}
+{\footnotesize\ttfamily Words\+::\+Words (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Words.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                               :WordsList(\mbox{\hyperlink{class_words_ad8f06081d44d623c6b14ca61e27bc75b}{getTextFromFile}}(filename)) \{}
+\DoxyCodeLine{4     Word = \mbox{\hyperlink{class_words_a494fb65e9124ade0261dfed96e605cfb}{generateWords}}();}
+\DoxyCodeLine{5 \};}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_words_aabf02b7478f57e0bd9fea0e2f87f910f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_words_a494fb65e9124ade0261dfed96e605cfb}\label{class_words_a494fb65e9124ade0261dfed96e605cfb}} 
+\index{Words@{Words}!generateWords@{generateWords}}
+\index{generateWords@{generateWords}!Words@{Words}}
+\doxysubsubsection{\texorpdfstring{generateWords()}{generateWords()}}
+{\footnotesize\ttfamily std\+::string Words\+::generate\+Words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Words.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                                \{}
+\DoxyCodeLine{7     srand(time(NULL));}
+\DoxyCodeLine{8     \textcolor{keywordflow}{return} Words::WordsList[rand() \% Words::WordsList.size()];}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_words_a494fb65e9124ade0261dfed96e605cfb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_words_ad8f06081d44d623c6b14ca61e27bc75b}\label{class_words_ad8f06081d44d623c6b14ca61e27bc75b}} 
+\index{Words@{Words}!getTextFromFile@{getTextFromFile}}
+\index{getTextFromFile@{getTextFromFile}!Words@{Words}}
+\doxysubsubsection{\texorpdfstring{getTextFromFile()}{getTextFromFile()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Words\+::get\+Text\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Words.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                               \{}
+\DoxyCodeLine{14     std::ifstream ReadFile(filename);}
+\DoxyCodeLine{15     std::vector<std::string> txt;}
+\DoxyCodeLine{16     std::string line;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{while} (getline(ReadFile, line)) \{}
+\DoxyCodeLine{18         txt.push\_back(line);}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     ReadFile.close();}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} txt;}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_words_a0d2d62508b6ee5125cf8c1540cd262d0}\label{class_words_a0d2d62508b6ee5125cf8c1540cd262d0}} 
+\index{Words@{Words}!getWord@{getWord}}
+\index{getWord@{getWord}!Words@{Words}}
+\doxysubsubsection{\texorpdfstring{getWord()}{getWord()}}
+{\footnotesize\ttfamily std\+::string Words\+::get\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Words.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                          \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{return} Words::Word;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_words_8h}{Words.\+h}}\item 
+\mbox{\hyperlink{_words_8cpp}{Words.\+cpp}}\end{DoxyCompactItemize}
