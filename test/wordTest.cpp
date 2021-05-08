@@ -18,7 +18,7 @@ TEST(Words, getTextFromFileTest) {
 
 	Words p = Words("testszo.txt");
 
-	std::vector<std::string> res = std::strp.getTextFromFile("testszo.txt");
+	std::vector<std::string> res = p.getTextFromFile("testszo.txt");
 
 	ASSERT_EQ(example, res);
 };
