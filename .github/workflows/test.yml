@@ -14,4 +14,4 @@ jobs:
       - name: make
         run: cd test && make
       - name: Player Teszt run
-        run: cd test && ./playerTest
+        run: cd test && ./playertest
