@@ -13,3 +13,5 @@ jobs:
         run: cd test && cmake .
       - name: make
         run: cd test && make
+      - name: Player Teszt run
+        run: cd test && ./playerTest
