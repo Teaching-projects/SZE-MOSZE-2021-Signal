@@ -13,22 +13,6 @@ TEST(Game, usedLetterTest) {
 
 	ASSERT_EQ(example, p.usedLetter('a'));
 };
-TEST(Game, getWordTest) {
-
-	std::string example = "_ _ _ _ _ ";
-
-	Game p = Game("Jozsi", "Feri", "testszo.txt");
-
-	ASSERT_EQ(example, p.getWord());
-};
-TEST(Game, getAllPlayerTest) {
-
-	std::vector<Player> example = {Player("Jozsi"),Player("Feri")};
-
-	Game p = Game("Jozsi", "Feri", "testszo.txt");
-
-	ASSERT_EQ(example, p.getAllPlayer());
-};
 TEST(Game, RemainLetterTest) {
 
 	int example = 5;
