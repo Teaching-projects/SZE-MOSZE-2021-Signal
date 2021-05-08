@@ -17,3 +17,5 @@ jobs:
         run: cd test && ./playertest
       - name: Words Teszt run
         run: cd test && ./wordstest
+      - name: Game Teszt run
+        run: cd test && ./gametest

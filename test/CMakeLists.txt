@@ -8,3 +8,6 @@ target_link_libraries(playertest ${GTEST_LIBRARIES} pthread)
 
 add_executable(wordstest wordTest.cpp ../Words.cpp)
 target_link_libraries(wordstest ${GTEST_LIBRARIES} pthread)
+
+add_executable(gametest gameTest.cpp ../Game.cpp)
+target_link_libraries(gametest ${GTEST_LIBRARIES} pthread)
