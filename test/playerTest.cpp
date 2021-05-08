@@ -8,7 +8,7 @@ TEST(Player, getNameTest) {
 
 	std::string example = "Jozsi";
 
-	Player p = new Player("Jozsi");
+	Player p = Player("Jozsi");
 
 	ASSERT_EQ(example, p.getName());
 };
@@ -16,7 +16,7 @@ TEST(Player, getPointTest) {
 
 	int example = 0;
 
-	Player p = new Player("Jozsi");
+	Player p = Player("Jozsi");
 
 	ASSERT_EQ(example, p.getPoint());
 };
