@@ -21,14 +21,6 @@ TEST(Game, RemainLetterTest) {
 
 	ASSERT_EQ(example, p.RemainLetter());
 };
-TEST(Game, getTypedCharTest) {
-
-	std::vector<char> example = {};
-
-	Game p = Game("Jozsi", "Feri", "testszo.txt");
-
-	ASSERT_EQ(example, p.getTypedChars());
-};
 
 int main(int argc, char** argv)
 {
