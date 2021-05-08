@@ -15,3 +15,5 @@ jobs:
         run: cd test && make
       - name: Player Teszt run
         run: cd test && ./playertest
+      - name: Words Teszt run
+        run: cd test && ./wordstest
