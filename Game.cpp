@@ -1,16 +1,9 @@
 #include "Game.h"
 
 Game::Game(std::string p1name, std::string p2name, std::string filename) : Players({ Player(p1name),Player(p2name) }), Word(Words(filename)) {
-/// 
-
 };
 
 char Game::GetChar(Player p) {
-	/// <summary>
-	/// Returns the next character from the standard input
-	/// </summary>
-	
-
 	std::cout << p.getName() << " irj be egy betut a tippeleshez:";
 	std::string l;
 	int counter = 0;
@@ -56,7 +49,6 @@ void Game::getWord() {
 }
 std::vector<Player> Game::getAllPlayer() {
 	return Players;
-	/// Gets all the players connected to the game. 
 }
 int Game::RemainLetter() {
 	std::vector<char> chars = Game::getTypedChars();
@@ -71,9 +63,7 @@ int Game::RemainLetter() {
 }
 std::vector<char> Game::getTypedChars() {
 	return Game::TypedCharacters;
-	///Returns typed characters.
 }
 Player& Game::getPlayerById(int i) {
 	return Game::Players[i];
-	///Returns a Players with a given id
 }
