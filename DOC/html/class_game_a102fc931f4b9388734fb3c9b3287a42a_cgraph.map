@@ -1,6 +1,0 @@
-<map id="Game::GetChar" name="Game::GetChar">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,119,57"/>
-<area shape="rect" id="node2" href="$class_player.html#a5cdfb66c3d1db49ab28e16661f9d7486" title=" " alt="" coords="171,5,289,32"/>
-<area shape="rect" id="node3" href="$class_game.html#a21e8d31d63e1258bfdf8e62eb5370eb7" title=" " alt="" coords="167,56,293,83"/>
-<area shape="rect" id="node4" href="$class_game.html#ade6307bf063689c0bd41eee375041b50" title=" " alt="" coords="341,56,493,83"/>
-</map>
