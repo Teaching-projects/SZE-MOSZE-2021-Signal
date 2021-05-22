@@ -26,7 +26,7 @@ public:
 	/** \brief Player constructor
       * \param name
 	*/
-	Player(std::string name);
+	Player(const std::string name);
 
 	/** \brief Get player name
 	  * \param
