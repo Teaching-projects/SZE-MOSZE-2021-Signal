@@ -28,7 +28,7 @@ public:
 	/** \brief Words constructor
 	  * \param filename
 	*/
-	Words(const std::string& filename);
+	explicit Words(const std::string& filename);
 
 	/** \brief Generate word
 	  * \param none

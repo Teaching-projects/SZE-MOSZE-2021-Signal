@@ -1,6 +1,6 @@
 #include "Words.h"
 
-Words::Words(const std::string& filename):WordsList(getTextFromFile(filename)) {
+explicit Words::Words(const std::string& filename):WordsList(getTextFromFile(filename)) {
 	Word = generateWords();
 };
 std::string Words::generateWords() {

@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(std::string p1name, std::string p2name, std::string filename) : Players({ Player(p1name),Player(p2name) }), Word(Words(filename)) {
+Game::Game(const std::string& p1name, const std::string& p2name, const std::string& filename) : Players({ Player(p1name),Player(p2name) }), Word(Words(filename)) {
 };
 
 char Game::GetChar(const Player& p) {

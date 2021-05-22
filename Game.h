@@ -30,7 +30,7 @@ public:
 	/** \brief Game constructor
 	  * \param p1name, p2name, filename
 	*/
-	Game(std::string p1name, std::string p2name, std::string filename);
+	Game(const std::string& p1name, const std::string& p2name, const std::string& filename);
 
 	/** \brief enable input for players
 	  * \param player
