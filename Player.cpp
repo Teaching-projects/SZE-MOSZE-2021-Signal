@@ -1,5 +1,5 @@
 #include "Player.h"
-explicit Player::Player(const std::string& name) : Name(name) {
+Player::Player(const std::string& name) : Name(name) {
 	Point = 0;
 };
 
