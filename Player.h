@@ -19,8 +19,8 @@
 #include <vector>
 #include <iostream>
 class Player {
-	int Point; ///< It contains points of player
 	const std::string Name; ///< It contains name of player
+	int Point; ///< It contains points of player
 
 public:
 	/** \brief Player constructor
