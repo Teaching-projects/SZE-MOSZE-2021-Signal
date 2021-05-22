@@ -1,5 +1,5 @@
 #include "Player.h"
-Player::Player(const std::string name) : Name(name),Point(0) {};
+Player::Player(std::string name) : Name(name),Point(0) {};
 
 const std::string Player::getName() const {
 	return Player::Name;
