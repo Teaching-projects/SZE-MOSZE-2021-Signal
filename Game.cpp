@@ -3,7 +3,7 @@
 Game::Game(std::string p1name, std::string p2name, std::string filename) : Players({ Player(p1name),Player(p2name) }), Word(Words(filename)) {
 };
 
-char Game::GetChar(Player p) {
+char Game::GetChar(const Player& p) {
 	std::cout << p.getName() << " irj be egy betut a tippeleshez:";
 	std::string l;
 	int counter = 0;

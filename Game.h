@@ -36,7 +36,7 @@ public:
 	  * \param player
 	  * \return return typed char
 	*/
-	char GetChar(Player p);
+	char GetChar(const Player& p);
 
 	/** \brief Print placeholders and find characters
 	  * \param none
