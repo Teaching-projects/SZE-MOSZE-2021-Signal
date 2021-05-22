@@ -19,14 +19,14 @@
 #include <vector>
 #include <iostream>
 class Player {
-	int Point; ///< It contains points of player
 	const std::string Name; ///< It contains name of player
+	int Point; ///< It contains points of player
 
 public:
 	/** \brief Player constructor
       * \param name
 	*/
-	Player(const std::string name);
+	explicit Player(const std::string& name);
 
 	/** \brief Get player name
 	  * \param

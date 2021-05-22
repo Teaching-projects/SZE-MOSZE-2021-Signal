@@ -17,6 +17,7 @@
 #define GAME
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <string>
 #include "Player.h"
 #include "Words.h"
@@ -29,13 +30,13 @@ public:
 	/** \brief Game constructor
 	  * \param p1name, p2name, filename
 	*/
-	Game(std::string p1name, std::string p2name, std::string filename);
+	Game(const std::string& p1name, const std::string& p2name, const std::string& filename);
 
 	/** \brief enable input for players
 	  * \param player
 	  * \return return typed char
 	*/
-	char GetChar(Player p);
+	char GetChar(const Player& p);
 
 	/** \brief Print placeholders and find characters
 	  * \param none

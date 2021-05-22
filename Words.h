@@ -28,7 +28,7 @@ public:
 	/** \brief Words constructor
 	  * \param filename
 	*/
-	Words(std::string filename);
+	explicit Words(const std::string& filename);
 
 	/** \brief Generate word
 	  * \param none
@@ -46,6 +46,6 @@ public:
 	  * \param filename
 	  * \return return list of the words
 	*/
-	std::vector<std::string> getTextFromFile(std::string filename);
+	std::vector<std::string> getTextFromFile(const std::string& filename);
 };
 #endif // !WORDS

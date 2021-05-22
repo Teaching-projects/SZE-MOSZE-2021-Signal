@@ -1,6 +1,6 @@
 #include "Words.h"
 
-Words::Words(std::string filename):WordsList(getTextFromFile(filename)) {
+ Words::Words(const std::string& filename):WordsList(getTextFromFile(filename)) {
 	Word = generateWords();
 };
 std::string Words::generateWords() {
@@ -10,7 +10,7 @@ std::string Words::generateWords() {
 std::string Words::getWord() {
 	return Words::Word;
 }
-std::vector<std::string> Words::getTextFromFile(std::string filename) {
+std::vector<std::string> Words::getTextFromFile(const std::string& filename) {
 	std::ifstream ReadFile(filename);
 	std::vector<std::string> txt;
 	std::string line;
