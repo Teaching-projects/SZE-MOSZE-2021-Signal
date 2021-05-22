@@ -17,6 +17,7 @@
 #define GAME
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <string>
 #include "Player.h"
 #include "Words.h"
