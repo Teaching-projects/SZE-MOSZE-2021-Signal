@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ze_2dmosze_2d2021_2dsignal_14',['ZE-MOSZE-2021-Signal',['../md_README.html',1,'']]]
+  ['words_14',['Words',['../classWords.html',1,'Words'],['../classWords.html#acd6eafa91ded901662ff1e437a564166',1,'Words::Words()']]]
 ];

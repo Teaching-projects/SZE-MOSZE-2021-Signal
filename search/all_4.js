@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['words_13',['Words',['../classWords.html',1,'Words'],['../classWords.html#acd6eafa91ded901662ff1e437a564166',1,'Words::Words()']]]
+  ['usedletter_13',['usedLetter',['../classGame.html#a21e8d31d63e1258bfdf8e62eb5370eb7',1,'Game']]]
 ];
