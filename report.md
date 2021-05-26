@@ -34,10 +34,9 @@
 # Kód dokumentáció
 
 | Teljesen dokumentált osztályok |
-| --- | --- | --- | 
-| Game | | |
-| Words | | |
-| Players | | |
+| Game |
+| Words |
+| Players |
 
 
 # Mindenféle számok
