@@ -10,7 +10,8 @@
 | Kiss Ádám | @Nexx1436 | 3 | 40+ | Nagy odafigyeléssel hajtotta végre a rá bízott feladatokat. |
 
 # Videók
-
+ - [CodeBaseDefense](/videos/codeDefense.mp4)
+ - [GamePlay](/videos/gameplay.mkv)
  
 # Befejezett feladatok
 
