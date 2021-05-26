@@ -34,7 +34,7 @@
 
 # Kód dokumentáció
 
-##Teljesen dokumentált osztályok
+### Teljesen dokumentált osztályok
  - Game 
  - Words 
  - Players 
